@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Sculder</title>
-		<link rel="stylesheet" href="css/style.css">
+		<title>Twitter Maps Framework</title>
 		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -11,39 +10,63 @@
 	  	<!-- debugging addon through debug.phonegap.com -->
 	  	<script src="http://debug.phonegap.com/target/target-script-min.js#anonymous"></script>
 
-	  	<script type="text/javascript" charset="utf-8" src="js/iscroll-lite.js"></script>
+	  	<!-- <script type="text/javascript" charset="utf-8" src="js/iscroll-lite.js"></script> -->
 	  	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.2.0.min.js"></script>
 		<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 	</head>
 	<body onload="onLoad();">
-		<header>
-    		<h1>Sculder</h1>
-		</header>
-		<div id="wrapper">
-    		<div id="main-content">
-    			<div id="pages">
-	    			<div id="map" class="current">
-	    			</div>
-	    			<div id="camera">
-	    			</div>
-	    			<div id="twitter">
-	    			</div>
+	
+		<!-- Map section -->
+		<div data-role="page" id="map" data-theme="e">
+			<div data-role="header" data-id="myheader" data-position="fixed"><h1>Map</h1></div>
+			<div data-role="content">
+	   			<h2>Map contents here.</h2>
+			</div>
+			<div data-role="footer" data-id="myfooter" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+		       			<li><a href="#" data-role="button" data-transition="pop" data-direction="reverse" data-theme="b">Map</a></li>
+		       			<li><a href="#camera" data-role="button" data-transition="pop" data-direction="reverse">Camera</a></li>
+		       			<li><a href="#twitter" data-role="button" data-transition="pop" data-direction="reverse">Twitter</a></li>
+		       		</ul>
 				</div>
-    		</div>
+			</div>
 		</div>
-		<footer>
-			<ul id="tab-bar">
-    			<li>
-        			<a href="#map">Map</a>
-    			</li>
-    			<li>
-        			<a href="#camera">Camera</a>
-    			</li>
-    			<li>
-        			<a href="#twitter">Twitter</a>
-    			</li>
-			</ul>
-		</footer>
+		
+		<!-- Camera section -->
+		<div data-role="page" id="camera" data-theme="e">
+			<div data-role="header" data-id="myheader" data-position="fixed"><h1>Camera</h1></div>
+			<div data-role="content">
+	   			<h2>Camera content here.</h2>
+	   		</div>
+			<div data-role="footer" data-id="myfooter" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+		       			<li><a href="#map" data-role="button" data-transition="pop" data-direction="reverse">Map</a></li>
+		       			<li><a href="#" data-role="button" data-transition="pop" data-direction="reverse" data-theme="b">Camera</a></li>
+		       			<li><a href="#twitter" data-role="button" data-transition="pop" data-direction="reverse">Twitter</a></li>
+		       		</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Twitter section -->
+		<div data-role="page" id="twitter" data-theme="e">
+		<div data-role="header" data-id="myheader" data-position="fixed"><h1>Twitter</h1></div>
+			<div data-role="content">
+	   			<h2>Twitter contents here.</h2>
+	   		</div>
+			<div data-role="footer" data-id="myfooter" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+		       			<li><a href="#map" data-role="button" data-transition="pop" data-direction="reverse">Map</a></li>
+		       			<li><a href="#camera" data-role="button" data-transition="pop" data-direction="reverse">Camera</a></li>
+		       			<li><a href="#" data-role="button" data-transition="pop" data-direction="reverse" data-theme="b">Twitter</a></li>
+		       		</ul>
+				</div>
+			</div>
+		</div>
+		
 	</body>
 </html>

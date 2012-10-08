@@ -2,16 +2,17 @@
       document.addEventListener("deviceready", onDeviceReady, true);
  }
  function onDeviceReady(){
-    alert("PhoneGap is working!!");
+    //alert("PhoneGap is working!!");
  }
  function onError(){
      alert("Error");
  }
- var theScroll;
- function scroll(){
-     theScroll = new iScroll('wrapper');
- }
- document.addEventListener('DOMContentLoaded', scroll, false);
+// iscroll stuff - taking out now for jQuery mobile instead
+// var theScroll;
+// function scroll(){
+//     theScroll = new iScroll('wrapper');
+// }
+// document.addEventListener('DOMContentLoaded', scroll, false);
  
  $('#tab-bar a').on('click', function(e){
 	    e.preventDefault();
@@ -19,4 +20,5 @@
 	    $("#pages .current").removeClass("current");
 	    nextPage.addClass("current");
 	});
+ 
  
