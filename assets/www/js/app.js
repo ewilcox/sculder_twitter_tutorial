@@ -7,18 +7,27 @@
  function onError(){
      alert("Error");
  }
-// iscroll stuff - taking out now for jQuery mobile instead
+// iscroll stuff - taking out now for jQuery mobile instead - works much better
 // var theScroll;
 // function scroll(){
 //     theScroll = new iScroll('wrapper');
 // }
 // document.addEventListener('DOMContentLoaded', scroll, false);
  
- $('#tab-bar a').on('click', function(e){
-	    e.preventDefault();
-	    var nextPage = $(e.target.hash);
-	    $("#pages .current").removeClass("current");
-	    nextPage.addClass("current");
+ function getTweets(data) {
+	 console.log(data);
+	var output='<ul data-role="listview" data-theme="a">';
+	$.each(data.results, function(key, val) {
+		//console.log(val.text);
+		var text=val.text,
+			thumbnail= val.profile_image_url,
+			name=val.from_user_name,
+			user=val.from_user;
+	    output+= '<li>'
+		output += '<img src="'+thumbnail +'" alt = "Photo of "'+name +'">';
+		output += '<div data-role="controlgroup"><a href="http://twitter.com/'+user+'"><h2>'+name+'</h2></a>'+text+'</div>';
+		output +='</li>';
 	});
- 
- 
+	output += '</ul>';
+	$('#tweetlist').html(output);
+}
