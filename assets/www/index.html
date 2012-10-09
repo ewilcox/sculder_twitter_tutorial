@@ -7,9 +7,9 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 	  	<script type="text/javascript" charset="utf-8" src="js/cordova-2.0.0.js"></script>
 
-	  	<!-- debugging addon through debug.phonegap.com
+	  	<!-- debugging addon through debug.phonegap.com 		-->
 	  	<script src="http://debug.phonegap.com/target/target-script-min.js#anonymous"></script>
-		-->
+
 		
 	  	<!-- <script type="text/javascript" charset="utf-8" src="js/iscroll-lite.js"></script> -->
 	  	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -37,9 +37,10 @@
 		
 		<!-- Camera section -->
 		<div data-role="page" id="camera" data-theme="e">
-			<div data-role="header" data-id="myheader" data-position="fixed"><h1>Camera</h1></div>
+			<div data-role="header" data-id="myheader" data-position="fixed"><h1>Capture Photo</h1></div>
 			<div data-role="content">
-	   			<h2>Camera content here.</h2>
+	   			<div data-role="button" onclick="capturePhoto();">Capture Photo</div><br>
+        		<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
 	   		</div>
 			<div data-role="footer" data-id="myfooter" data-position="fixed">
 				<div data-role="navbar">
