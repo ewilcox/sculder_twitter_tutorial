@@ -11,3 +11,5 @@ Ran short on time for maps.  I have a map loading, but it's just an insert
 from the google maps code to the maps section of the framework.
 I could pull lat & long data from the gps to update a current location but
 what I have isn't really accessing the google maps api.
+
+All of this is working on my android device.
